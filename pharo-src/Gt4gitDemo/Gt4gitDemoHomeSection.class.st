@@ -1,10 +1,16 @@
 Class {
-	#name : #Gt4gitDemoHomeSection,
-	#superclass : #GtHomeMultiCardSection,
-	#category : #Gt4gitDemo
+	#name : 'Gt4gitDemoHomeSection',
+	#superclass : 'GtHomeMultiCardSection',
+	#category : 'Gt4gitDemo',
+	#package : 'Gt4gitDemo'
 }
 
-{ #category : #accessing }
+{ #category : 'as yet unclassified' }
+Gt4gitDemoHomeSection >> defaultPriority [
+	^ 29
+]
+
+{ #category : 'accessing' }
 Gt4gitDemoHomeSection >> gtBookCard [
 	<gtSectionCard>
 	<gtExample>
@@ -27,7 +33,12 @@ Gt4gitDemoHomeSection >> gtBookCard [
 				yourself
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 Gt4gitDemoHomeSection >> gtBookName [
 	^ 'Gt4gitDemo'
+]
+
+{ #category : 'accessing' }
+Gt4gitDemoHomeSection >> sectionTitle [
+ ^ 'My Section'
 ]

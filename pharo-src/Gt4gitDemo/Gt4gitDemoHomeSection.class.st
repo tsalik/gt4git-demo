@@ -7,7 +7,7 @@ Class {
 
 { #category : 'as yet unclassified' }
 Gt4gitDemoHomeSection >> defaultPriority [
-	^ 29
+	^ 1000
 ]
 
 { #category : 'accessing' }

@@ -4,6 +4,21 @@ Class {
 	#category : #BaselineOfGt4gitDemo
 }
 
+{ #category : #loading }
+BaselineOfGt4gitDemo class >> loadLepiter [
+	IceRepository registry  
+		detect: [ :aRepository |
+			aRepository name = 'gt4git-demo' ]
+		ifFound: [ :aRepository | 
+			| defaultDatabase currentProperties |
+			defaultDatabase := LeDatabasesRegistry defaultLogicalDatabase.
+			currentProperties := defaultDatabase properties.
+			currentProperties addRegisteredDirectory: aRepository repositoryDirectory / 'lepiter'.
+			defaultDatabase reload ]
+		ifNone: [
+			self inform: 'Repository not found.' ]
+]
+
 { #category : #baseline }
 BaselineOfGt4gitDemo >> baseline: spec [
 	<baseline>

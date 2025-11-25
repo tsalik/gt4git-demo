@@ -7,6 +7,7 @@ Class {
 
 { #category : 'loading' }
 BaselineOfGt4gitDemo >> loadLepiter [
+	LeDatabasesRegistry defaultLogicalDatabase pages.
 	IceRepository registry  
 		detect: [ :aRepository |
 			aRepository name = 'gt4git-demo' ]

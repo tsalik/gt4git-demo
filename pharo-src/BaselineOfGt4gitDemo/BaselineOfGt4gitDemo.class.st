@@ -6,7 +6,7 @@ Class {
 }
 
 { #category : 'loading' }
-BaselineOfGt4gitDemo class >> loadLepiter [
+BaselineOfGt4gitDemo >> loadLepiter [
 	IceRepository registry  
 		detect: [ :aRepository |
 			aRepository name = 'gt4git-demo' ]

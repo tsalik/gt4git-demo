@@ -26,5 +26,23 @@ BaselineOfGt4gitDemo >> baseline: spec [
 	<baseline>
 		^ spec for: #common do: [
 			spec package: 'Gt4gitDemo'.
+			spec postLoadDoIt: #loadLepiter
 		]
+]
+
+{ #category : 'loading' }
+BaselineOfGt4gitDemo >> loadLepiter [
+	LeDatabasesRegistry defaultLogicalDatabase pages.
+	IceRepository registry  
+		detect: [ :aRepository |
+			aRepository name = 'gt4git-demo' ]
+		ifFound: [ :aRepository | 
+			| defaultDatabase currentProperties |
+			LeDatabasesRegistry defaultLogicalDatabase fullReload.
+			defaultDatabase := LeDatabasesRegistry defaultLogicalDatabase.
+			currentProperties := defaultDatabase properties.
+			currentProperties addRegisteredDirectory: aRepository repositoryDirectory / 'lepiter'.
+			defaultDatabase reload ]
+		ifNone: [
+			self inform: 'Repository not found.' ]
 ]

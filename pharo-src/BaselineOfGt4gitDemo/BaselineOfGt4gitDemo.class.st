@@ -6,7 +6,7 @@ Class {
 }
 
 { #category : 'loading' }
-BaselineOfGt4gitDemo >> loadLepiter [
+BaselineOfGt4gitDemo class >> loadLepiter [
 	LeDatabasesRegistry defaultLogicalDatabase pages.
 	IceRepository registry  
 		detect: [ :aRepository |

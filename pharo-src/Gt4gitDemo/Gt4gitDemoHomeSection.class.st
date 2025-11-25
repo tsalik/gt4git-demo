@@ -15,6 +15,7 @@ Gt4gitDemoHomeSection >> gtBookCard [
 	<gtSectionCard>
 	<gtExample>
 	<noTest>
+	#BaselineOfGt4gitDemo asClass loadLepiter.
 	^ GtHomeCard lepiterBaseWithTableOfContents
 		title: 'My Book';
 		description: 'Read the extensive book';

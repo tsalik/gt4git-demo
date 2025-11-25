@@ -1,1 +1,1 @@
-Package { #name : #BaselineOfGt4gitDemo }
+Package { #name : 'BaselineOfGt4gitDemo' }

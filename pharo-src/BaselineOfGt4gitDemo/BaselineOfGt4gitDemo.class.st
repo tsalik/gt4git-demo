@@ -1,10 +1,11 @@
 Class {
-	#name : #BaselineOfGt4gitDemo,
-	#superclass : #BaselineOf,
-	#category : #BaselineOfGt4gitDemo
+	#name : 'BaselineOfGt4gitDemo',
+	#superclass : 'BaselineOf',
+	#category : 'BaselineOfGt4gitDemo',
+	#package : 'BaselineOfGt4gitDemo'
 }
 
-{ #category : #loading }
+{ #category : 'loading' }
 BaselineOfGt4gitDemo class >> loadLepiter [
 	IceRepository registry  
 		detect: [ :aRepository |
@@ -19,10 +20,11 @@ BaselineOfGt4gitDemo class >> loadLepiter [
 			self inform: 'Repository not found.' ]
 ]
 
-{ #category : #baseline }
+{ #category : 'baseline' }
 BaselineOfGt4gitDemo >> baseline: spec [
 	<baseline>
 		^ spec for: #common do: [
-			spec package: 'Gt4gitDemo'
+			spec package: 'Gt4gitDemo';
+			postLoadDoIt: #loadLepiter.
 		]
 ]

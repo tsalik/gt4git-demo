@@ -25,7 +25,6 @@ BaselineOfGt4gitDemo >> loadLepiter [
 BaselineOfGt4gitDemo >> baseline: spec [
 	<baseline>
 		^ spec for: #common do: [
-			spec package: 'Gt4gitDemo';
-			postLoadDoIt: #loadLepiter.
+			spec package: 'Gt4gitDemo'.
 		]
 ]
